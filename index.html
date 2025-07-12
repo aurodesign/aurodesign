@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AURO Smart Design</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      text-align: center;
+      color: #333;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+
+    .container {
+      position: relative;
+      max-width: 400px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      background: url('image/background.jpg') no-repeat center center;
+      background-size: cover;
+      overflow: hidden;
+      color: white; /* Text color for dark backgrounds */
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* overlay for better contrast */
+      border-radius: 15px;
+      z-index: 0;
+    }
+
+    .container > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-container {
+      opacity: 0;
+      animation: slideUp 2s ease-out forwards;
+    }
+
+    .details {
+      opacity: 0;
+      transform: scale(0.9);
+      animation: fadeIn 2s ease-out forwards 1s;
+    }
+
+    img {
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 15px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+      text-align: center;
+      color:black;
+    }
+
+    .btn {
+      display: block;
+    width: 94%;
+  padding: 12px;
+  margin: 6px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(15, 15, 15, 0.6); /* 60% opacity */
+  color: rgb(212, 150, 15);
+  font-size: 16px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  backdrop-filter: blur(2px); /* Optional: adds soft blur effect behind */
+    }
+
+    .btn:hover {
+      background-color: rgba(12, 12, 12, 0.85); /* Slightly less transparent on hover */
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color:rgb(184, 214, 13);
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo-container">
+      <img src="image/aurosmart.png" alt="AURO Smart Design Logo" />
+    </div>
+
+    <div class="details">
+      <p style="text-align: justify;">We design smart service stickers embedded with QR codes that link to custom web pages, making service details accessible with a single scan.</p>
+
+      <p><strong>Contact:</strong><br>+94 704 856 636</p>
+      <p><strong>Email:</strong><br>biz.aurodesign@outlook.com</p>
+
+      <a href="tel:0704856636" class="btn call">Call Now</a>
+      <a href="mailto:biz.aurodesign@outlook.com" class="btn email">Email Us</a>
+      <a href="https://wa.me/94704856636" class="btn whatsapp">WhatsApp</a>
+
+      <div class="footer">&copy; 2025 AURO Smart Design. All rights reserved.</div>
+      <div>Powered by AURO Smart Design</div>
+    </div>
+  </div>
+</body>
+</html>
