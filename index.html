@@ -4,37 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AURO Smart Design</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f6f9;
-      text-align: center;
-      color: #333;
+      margin: 0;
       padding: 20px;
       display: flex;
       justify-content: center;
-        align-items: center;
-        min-height: 90vh;
+      align-items: center;
+      min-height: 100vh;
     }
 
     .container {
       position: relative;
-      max-width: 400px;
-      margin: auto;
+      max-width: 420px;
+      width: 100%;
       padding: 25px;
       border-radius: 15px;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
       background: url('image/background.jpg') no-repeat center center;
       background-size: cover;
       overflow: hidden;
-      color: white; /* Text color for dark backgrounds */
+      color: white;
     }
 
     .container::before {
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5); /* overlay for better contrast */
+      background: rgba(0, 0, 0, 0.5);
       border-radius: 15px;
       z-index: 0;
     }
@@ -51,69 +54,71 @@
 
     .details {
       opacity: 0;
-      transform: scale(0.9);
       animation: fadeIn 2s ease-out forwards 1s;
     }
 
     img {
-      max-width: 300px;
+      width: 100%;
       height: auto;
       margin-bottom: 20px;
+    }
+
+    h2, h3 {
+      text-align: center;
     }
 
     p {
       font-size: 15px;
       margin-bottom: 12px;
-      line-height: 1.5;
-      text-align: center;
-      color:black;
+      line-height: 1.6;
+      text-align: justify;
+      color: #fff;
     }
 
     .btn {
       display: block;
-    width: 94%;
-  padding: 12px;
-  margin: 6px 0;
-  border: none;
-  border-radius: 6px;
-  background-color: rgba(15, 15, 15, 0.6); /* 60% opacity */
-  color: rgb(212, 150, 15);
-  font-size: 16px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-  backdrop-filter: blur(2px); /* Optional: adds soft blur effect behind */
+      width: 94%;
+      padding: 12px;
+      margin: 6px auto;
+      border: none;
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: rgb(255, 200, 0);
+      font-size: 16px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      backdrop-filter: blur(2px);
     }
 
     .btn:hover {
-      background-color: rgba(12, 12, 12, 0.85); /* Slightly less transparent on hover */
+      background-color: rgba(255, 255, 255, 0.25);
     }
 
     .footer {
       margin-top: 20px;
       font-size: 13px;
-      color:rgb(184, 214, 13);
+      color: rgb(212, 212, 212);
+    }
+
+    .card-body {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #222;
+      border-radius: 8px;
+    }
+
+    .card-body ul {
+      padding-left: 1.2rem;
+      text-align: left;
     }
 
     @keyframes slideUp {
-      from {
-        transform: translateY(50px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: scale(0.9);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
@@ -125,18 +130,93 @@
     </div>
 
     <div class="details">
-      <p style="text-align: justify;">We design smart service stickers embedded with QR codes that link to custom web pages, making service details accessible with a single scan.</p>
+      <h5 >Welcome to AURO Smart Design</h5>
+      <h3>Smart QR Web Cards for Everyone</h3>
+      <p >We specialize in creating smart, mobile-friendly web cards with QR code access — perfect for individuals, freelancers, and small businesses.</p>
+      <p >Our service offers a simple yet powerful way to showcase your contact details, services, social media links, and more — all on one stylish digital page. Whether you're a salon owner, technician, teacher, doctor, or small business, we help you stand out and stay connected with your customers, anytime and anywhere.</p>
 
-      <p><strong>Contact:</strong><br>+94 704 856 636</p>
-      <p><strong>Email:</strong><br>biz.aurodesign@outlook.com</p>
+      <!-- Subscription Plans Section -->
+      <h3 class="text-warning text-center mb-3" >Subscription Plans</h3>
+      <div class="row row-cols-1 row-cols-md-2 g-3">
+        
+        <!-- Basic Plan -->
+        <div class="col">
+          <div class="card border-secondary shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title text-secondary">Basic Plan</h5>
+              <ul>
+                <li>Logo</li>
+                <li>Short Introduction</li>
+                <li>Contact Details</li>
+                <li>Quick Contact Buttons</li>
+              </ul>
+              <h6 class="text-muted">LKR 2,000 / Year</h6>
+            </div>
+          </div>
+        </div>
 
-      <a href="tel:0704856636" class="btn call">Call Now</a>
-      <a href="mailto:biz.aurodesign@outlook.com" class="btn email">Email Us</a>
-      <a href="https://wa.me/94704856636" class="btn whatsapp">WhatsApp</a>
+        <!-- Standard Plan -->
+        <div class="col">
+          <div class="card border-warning shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title text-warning">Standard Plan</h5>
+              <ul>
+                <li>Everything in Basic Plan</li>
+                <li>Services Section</li>
+                <li>Social Links</li>
+                <li>1 Image</li>
+              </ul>
+              <h6 class="text-muted">LKR 2,500 / Year</h6>
+            </div>
+          </div>
+        </div>
 
-      <div class="footer">&copy; 2025 AURO Smart Design. All rights reserved.</div>
-      <div>Powered by AURO Smart Design</div>
+        <!-- Premium Plan -->
+        <div class="col">
+          <div class="card border-primary shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Premium Plan</h5>
+              <ul>
+                <li>Everything in Standard</li>
+                <li>Opening Hours</li>
+                <li>2 Images</li>
+                <li>Simple Contact Form</li>
+              </ul>
+              <h6 class="text-muted">LKR 3,500 / Year</h6>
+            </div>
+          </div>
+        </div>
+
+        <!-- Business Plan -->
+        <div class="col">
+          <div class="card border-danger shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title text-danger">Business Plan</h5>
+              <ul>
+                <li>Everything in Standard</li>
+                <li>Opening Hours</li>
+                <li>3 Images</li>
+                <li>Google Map</li>
+              </ul>
+              <h6 class="text-muted">LKR 4,500 / Year</h6>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Contact -->
+      <p style="text-align: center;"><strong>Contact:</strong><br>+94 704 856 636</p>
+      <p style="text-align: center;"><strong>Email:</strong><br>biz.aurodesign@outlook.com</p>
+
+      <a href="tel:0704856636" class="btn call">📞 Call Now</a>
+      <a href="mailto:biz.aurodesign@outlook.com" class="btn email">✉️ Email Us</a>
+      <a href="https://wa.me/94704856636" class="btn whatsapp">💬 WhatsApp</a>
+
+      <div class="footer mt-3" style="text-align: center;">&copy; 2025 AURO Smart Design. All rights reserved.</div>
+      <div style="font-size: 12px; text-align: center;">Powered by AURO Smart Design</div>
     </div>
   </div>
+
 </body>
 </html>
